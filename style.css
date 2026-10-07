@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+h2 {
+    text-align: center;
+    margin-top: 25px;
+    color: #333;
+}
+
+.dfa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.state {
+    border: 3px solid #4f46e5;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    background: #eef2ff;
+}
+
+.state small {
+    font-size: 10px;
+}
+
+.arrow {
+    font-size: 25px;
+    font-weight: bold;
+}
+#transitionTable {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+#transitionTable th,
+#transitionTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#transitionTable th {
+    background: #4f46e5;
+    color: white;
+}
+
+#transitionTable tr:nth-child(even) {
+    background: #f1f5f9;
+}
+.info {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 5px solid #4f46e5;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info h3 {
+    color: #4f46e5;
+}
+
+.info p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.formula {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.dfa-rules {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 5px solid #06b6d4;
+}
+
+.dfa-rules p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.rule {
+    background: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+.transition-info {
+    margin-top: 15px;
+    padding: 15px;
+    background: #eef2ff;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.transition-info b {
+    color: #4f46e5;
+}
+/* Professional improvements */
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+.state {
+    transition: 0.3s;
+}
+
+.state:hover {
+    transform: scale(1.08);
+}
+
+#result {
+    line-height: 1.8;
+}
+
+table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dfa-rules,
+.info {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.project-info {
+    margin: 15px 0 20px;
+    padding: 15px;
+    background: #eef2ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project-info p {
+    margin: 5px 0;
+    color: #333;
+}

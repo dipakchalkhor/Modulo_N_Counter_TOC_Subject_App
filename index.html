@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modulo-N Counter using DFA | TOC Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Modulo-N Counter using DFA</h1>
+        <div class="project-info">
+    <p><b>Project:</b> Modulo-N Counter using DFA</p>
+    <p><b>Subject:</b> Theory of Computation</p>
+    <p><b>Student:</b> Dipak Chalkhor</p>
+    <p><b>USN:</b> CM24077</p>
+</div>
+
+        <p>
+            Count occurrences of a character modulo k using a
+            Deterministic Finite Automaton.
+        </p>
+
+        <label>Data Stream:</label>
+        <input type="text" id="stream" placeholder="Example: abacaba">
+
+        <label>Character to Count:</label>
+        <input type="text" id="character" maxlength="1" placeholder="Example: a">
+
+        <label>Modulo (k):</label>
+        <input type="number" id="modulo" min="1" placeholder="Example: 3">
+
+        <button onclick="calculateModulo()">Calculate</button>
+        <button onclick="simulateDFA()">Start DFA Simulation</button>
+        <button onclick="resetApp()">Reset</button>
+
+        <div id="result"></div>
+        <h2>DFA State Diagram</h2>
+        <div class="dfa-rules">
+
+    <h2>DFA Rules</h2>
+
+    <p>
+        If the input character matches the selected character,
+        the DFA moves to the next state.
+    </p>
+
+    <p>
+        If the input character does not match, the DFA remains
+        in the same state.
+    </p>
+
+    <div class="rule">
+        Selected Character:
+        q(i) → q((i + 1) mod k)
+    </div>
+
+    <div class="rule">
+        Other Character:
+        q(i) → q(i)
+    </div>
+
+</div>
+
+<div id="dfaDiagram" class="dfa"></div>
+<div id="transitionInfo" class="transition-info"></div>
+<h2>DFA Transition Table</h2>
+<div class="info">
+    <h2>About Modulo-N Counter</h2>
+
+    <p>
+        A Modulo-N Counter is a Deterministic Finite Automaton (DFA)
+        that counts the occurrences of a selected character modulo k.
+    </p>
+
+    <h3>How it works</h3>
+
+    <p>
+        Each state represents a possible remainder from 0 to k-1.
+        Whenever the selected character is found, the DFA moves to
+        the next state.
+    </p>
+
+    <p>
+        The final state represents the mathematical remainder of the
+        character count divided by k.
+    </p>
+
+    <h3>Formula</h3>
+
+    <div class="formula">
+        Remainder = Count of Character mod k
+    </div>
+</div>
+
+<table id="transitionTable">
+    <thead>
+        <tr>
+            <th>Current State</th>
+            <th>Character Found</th>
+            <th>Next State</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
